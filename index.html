@@ -42,15 +42,50 @@
 
         <div class="home">
             <div class="sect1">
-                <article class="box box1">
-                    <h3 class="h2">Opposition without proposal - </h3>
-                    <p class="subtext">According to historical accounts, the Kaaba existed as a sanctuary even in
-                        pre-Islamic
-                        times.
-                        The Quraysh tribe, who ruled Mecca before Islam, rebuilt the Kaaba around 608 CE. When quresh
-                        attcked mecca it was a not an easy time for the believer.
-                    </p>
-                </article>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <article class="box box1 text" style="background-image: url(article_img/2.png);">
+                            <h3 class="h2">10 year plan for Congress to Finish RSS from the roots of India.</h3>
+                            <p class="subtext">According to historical accounts, the Kaaba existed as a sanctuary even
+                                in
+                                pre-Islamic
+                                times.
+                                The Quraysh tribe, who ruled Mecca before Islam, rebuilt the Kaaba around 608 CE.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <article class="box box1 text" style="background-image: url(article_img/3.png);">
+                            <h3 class="h2">Who was the Tipu Sultan? - a question of history</h3>
+                            <p class="subtext">According to historical accounts, the Kaaba existed as a sanctuary even
+                                in
+                                pre-Islamic
+                                times.
+                                The Quraysh tribe, who ruled Mecca before Islam, rebuilt the Kaaba around 608 CE. When
+                                quresh
+                                attcked mecca it was a not an easy time for the believer.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <article class="box box1 text" style="background-image: url(article_img/1.png);">
+                            <h3 class="h2">Opposition without proposal - </h3>
+                            <p class="subtext">According to historical accounts, the Kaaba existed as a sanctuary even
+                                in
+                                pre-Islamic
+                                times.
+                                The Quraysh tribe, who ruled Mecca before Islam, rebuilt the Kaaba around 608 CE. When
+                                quresh
+                                attcked mecca it was a not an easy time for the believer.
+                            </p>
+                        </article>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+
                 <div class="newssect">
                     <h2 class="h2 h2title">Latest News</h2>
                 </div>
@@ -62,28 +97,32 @@
                 <p class="text">According to historical accounts, the Kaaba existed as a sanctuary even in
                     pre-Islamic
                     times.
-                    The Quraysh tribe, who ruled Mecca before Islam, rebuilt the Kaaba around 608 CE. Read more....</p>
+                    The Quraysh tribe, who ruled Mecca before Islam, rebuilt the Kaaba around 608 CE. Read more....
+                </p>
             </div>
             <div class="box box2">
                 <h3 class="subtext">Opposition without proposal - </h3>
                 <p class="text">According to historical accounts, the Kaaba existed as a sanctuary even in
                     pre-Islamic
                     times.
-                    The Quraysh tribe, who ruled Mecca before Islam, rebuilt the Kaaba around 608 CE. Read more....</p>
+                    The Quraysh tribe, who ruled Mecca before Islam, rebuilt the Kaaba around 608 CE. Read more....
+                </p>
             </div>
             <div class="box box2">
                 <h3 class="subtext">Opposition without proposal - </h3>
                 <p class="text">According to historical accounts, the Kaaba existed as a sanctuary even in
                     pre-Islamic
                     times.
-                    The Quraysh tribe, who ruled Mecca before Islam, rebuilt the Kaaba around 608 CE. Read more....</p>
+                    The Quraysh tribe, who ruled Mecca before Islam, rebuilt the Kaaba around 608 CE. Read more....
+                </p>
             </div>
             <div class="box box2">
                 <h3 class="subtext">Opposition without proposal - </h3>
                 <p class="text">According to historical accounts, the Kaaba existed as a sanctuary even in
                     pre-Islamic
                     times.
-                    The Quraysh tribe, who ruled Mecca before Islam, rebuilt the Kaaba around 608 CE. Read more....</p>
+                    The Quraysh tribe, who ruled Mecca before Islam, rebuilt the Kaaba around 608 CE. Read more....
+                </p>
             </div>
             <h2 class="h2 h2title">Resources</h2>
             <div class="box box3">
@@ -118,8 +157,35 @@
         sidebar.classList.toggle('active');
         sidebarToggle.classList.toggle('active');
     });
+</script>
 
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
 </script>
 
 </html>
