@@ -29,8 +29,7 @@
     <div class="content">
 
         <aside class="slidebar">
-
-            <i class="fa-solid fa-angle-left sidebar-toggle"></i>
+            <i id="sidebar-toggle" class="fa-solid fa-angle-left "></i>
             <nav class="navlist">
                 <ul>
                     <li class="h3 navitem"><a href="">News</a></li>
@@ -39,7 +38,6 @@
                     <li class="h3 navitem"><a href="">About</a></li>
                 </ul>
             </nav>
-
         </aside>
 
         <div class="home">
@@ -113,7 +111,7 @@
 </body>
 <script src="https://kit.fontawesome.com/91c4d4adfe.js" crossorigin="anonymous"></script>
 <script>
-    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const sidebarToggle = document.querySelector('#sidebar-toggle');
     const sidebar = document.querySelector('.slidebar');
 
     sidebarToggle.addEventListener('click', () => {

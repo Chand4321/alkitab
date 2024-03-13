@@ -4,34 +4,56 @@
 * {
     padding: 0;
     margin: 0;
-    background: #a6a8a5;
+    background: #ffffff;
+}
+
+
+
+.slidebar {
+    padding: 10px 20px 10px 20px;
+    background: #d3d6d5;
+    width: max-content;
+    height: auto;
+
+    /* Full viewport height */
+    transition: transform 0.3s ease-in-out;
+    /* Smoother transition */
+}
+
+#sidebar-toggle {
+    display: none;
+}
+
+#hideme {
+    display: none;
 }
 
 @media (max-width: 768px) {
     .slidebar {
         transform: translateX(-100%);
-        /* Move off-screen by default */
+
+        position: fixed;
     }
 
-    .sidebar-toggle {
+    #sidebar-toggle {
         display: block;
         position: fixed;
         right: -35px;
         top: 0;
         padding: 10px 20px 10px 20px;
         border-radius: 10px 10px 10px 10px;
-        /* Show button on mobile */
-        background: #a8b5ba;
+
+        background: #d3d6d5;
         transform: rotate(0.5turn);
     }
 }
 
 .slidebar.active {
     transform: translateX(0);
-    /* Show sidebar on click */
+
 }
 
-.sidebar-toggle.active {
+#sidebar-toggle.active {
     transform: translateX(0);
 }
 
@@ -59,7 +81,6 @@ body {
     justify-content: space-between;
 }
 
-.login-icon {}
 
 .logo img {
     height: 150px;
@@ -67,7 +88,7 @@ body {
 }
 
 .login {
-    background: #f2f8f8;
+    background: #d3d6d5;
     margin-right: 4vw;
     padding: 8px 11px 8px 11px;
     border-radius: 50%;
@@ -85,22 +106,7 @@ body {
 
 
 
-header {}
 
-.slidebar {
-    padding: 10px 20px 10px 20px;
-    background: #a8b5ba;
-    width: max-content;
-    height: auto;
-    position: fixed;
-    /* Full viewport height */
-    transition: transform 0.3s ease-in-out;
-    /* Smoother transition */
-}
-
-.sidebar-toggle {
-    display: none;
-}
 
 .navlist {
     background: transparent;
@@ -127,7 +133,7 @@ header {}
 }
 
 .box {
-    background: #f2f8f8;
+    background: #dbebeb;
     border-radius: 0px 10px 10px 0px;
 }
 
@@ -154,7 +160,7 @@ header {}
     float: right;
     height: 100vh;
     width: 35%;
-    background: #f2f8f8;
+    background: #dbebeb;
     border-radius: 10px 10px 10px 10px;
 }
 
